@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using Microsoft.AspNetCore.Mvc;
+using RocketseatAuction.API.Enums;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RocketseatAuction.API.Entities
 {
@@ -8,8 +10,9 @@ namespace RocketseatAuction.API.Entities
         public int Id { get; set; }
         public string Name { get; set; }
         public string Brand { get; set; }
-        public int Condition { get; set; }
+        public Condition Condition { get; set; }
         public decimal BasePrice { get; set; }
         public int AuctionId { get; set; }
     }
+
 }
