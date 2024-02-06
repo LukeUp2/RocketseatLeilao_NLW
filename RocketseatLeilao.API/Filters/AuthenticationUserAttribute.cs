@@ -44,9 +44,9 @@ namespace RocketseatAuction.API.Filters
         private string FromBase64String(string base64)
         {
             var data = Convert.FromBase64String(base64);
-            System.Text.Encoding.UTF8.GetString(data);
+            var email = System.Text.Encoding.UTF8.GetString(data);
 
-            return data;
+            return email;
         }
     }
 }
